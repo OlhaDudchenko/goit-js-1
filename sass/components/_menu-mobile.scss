@@ -1,0 +1,145 @@
+.menu-container {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 83px 48px 40px;
+  background: $white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  transform: translateX(100%);
+  @include animated(transform);
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.button-open {
+  display: inline-flex;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  cursor: pointer;
+  @include animated(color);
+}
+
+.button-open {
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: inline-flex;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+  @include animated(color);
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+.mobile-icon {
+  &:hover,
+  &:focus {
+    fill: currentColor;
+  }
+}
+@media (min-width: 768px) {
+  .button-open,
+  .menu-container {
+    display: none;
+  }
+}
+.mobile-menu {
+  @extend %ul;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+
+  letter-spacing: 0.02em;
+  color: $blue;
+  & :not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu_link {
+  color: $main-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
+.mobile-cont {
+  @extend %ul;
+
+  margin-bottom: 64px;
+}
+
+.mobile-cont__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $grey;
+  &--bigger {
+    font-size: 34px;
+    line-height: 1.17;
+    color: $blue;
+    text-decoration: none;
+  }
+}
+.mobile-cont__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu-social {
+  @extend %ul;
+  display: flex;
+}
+
+.menu-social__link {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $blue;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.defolt-left {
+  margin-left: 0;
+}
+.defolt-right {
+  margin-right: 0;
+}
+.menu-social__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}

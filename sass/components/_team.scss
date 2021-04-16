@@ -1,0 +1,110 @@
+.team {
+  background-color: #f5f4fa;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and(min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
+
+.team {
+  &__title {
+    margin-top: 0px;
+    // margin-bottom: 0px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+
+    @media screen and(max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and(min-width: 1200px) {
+      font-size: 36px;
+      line-height: 0.7;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.team-list {
+  @extend %ul;
+  // margin-top: 30px;
+
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30 px);
+  }
+  @media screen and(min-width: 1200px) {
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+    // justify-content: center;
+  }
+}
+
+.team-list {
+  &__card {
+    padding-bottom: 24px;
+    text-align: center;
+    background-color: $white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and(max-width:767px) {
+      margin-bottom: $list-gap;
+    }
+
+    @media screen and(min-width:768px) {
+      flex-basis: calc((100% - 60px) / 2);
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+
+    @media screen and(min-width: 1200px) {
+      flex-basis: calc((100% - 120px) / 4);
+      // margin-top: 30px;
+      // margin-left: 30px;
+    }
+  }
+}
+
+.team-list {
+  &__member {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+  }
+}
+
+.team-list {
+  &__position {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    color: $grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+  }
+}
+
+.team-list__wrapper {
+  height: 460px;
+
+  @media screen and(min-width: 768px) {
+    height: 374px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    // width: 270px;
+    height: 260px;
+  }
+}

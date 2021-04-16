@@ -1,0 +1,42 @@
+
+
+.social-list {
+  @extend %ul;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+&:nth-last-child(4) {
+  margin-right: 0px;}
+
+}
+
+.social-list{
+    &__item {
+  margin-right: 10px;}
+}
+
+.social-list{
+    &__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: $clients-color;
+  border-radius: 50px;
+  @include animated(background-color,color);
+  
+  }
+  
+  &__link:hover,
+  &__link:focus {
+  color: $white;
+  background-color: $blue;
+}
+}
+
+.social-list{
+    &__icon {
+  fill: currentColor;}
+}

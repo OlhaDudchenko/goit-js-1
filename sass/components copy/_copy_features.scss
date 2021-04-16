@@ -1,0 +1,69 @@
+
+/* Пример бекграунд имейдж */
+/* .features-list__card::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/features/antenna\ 1.svg);
+  background-size: 70px;
+}
+ */
+  
+ .features{padding-top: 94px;}
+ 
+ .features-list {
+   @extend %ul;
+  display: flex;
+  flex-wrap: wrap;
+
+  & :nth-child(4) {
+  margin-right: 0px;
+}
+}
+
+.features-list{
+    &__card {
+  width: calc((100% - 90px) / 4);
+  margin-right: $list-gap;}
+}
+
+.features-list{
+    &__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;}
+}
+
+.features-list{
+    &__desc {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $grey;}
+}
+.features-list{
+    &__title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;}
+    }
